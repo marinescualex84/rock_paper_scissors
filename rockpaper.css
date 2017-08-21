@@ -1,0 +1,135 @@
+* 	{
+	margin: 0;
+}
+
+body {
+	background-image: url("retina_wood_@2X.png");
+	min-height: 100%;
+	min-width: 1200px;
+	font-family: verdana;
+}
+
+div#game {
+	width: 1200px;
+	margin: auto;
+	height: 774px;
+	margin-top: 50px;
+	background-image: url("board1200x774.jpg");
+	position: relative;
+}
+
+div#info {
+	width: 380px;
+	height: 725px;
+	top: 26px;
+	left: 25px;
+	position: absolute;
+	display: inline;
+	background-color: rgb(0, 158, 63);
+}
+
+div#info .title {
+	text-align: center;
+	font-size: 1.7em;
+	font-weight: bold;
+	color: #fff;
+	padding: 34px 0;
+	border-bottom: 4px double #fff;
+}
+
+div#info .rules {
+	font-size: 1.3em;
+	color: #fff;
+	padding: 20px 0 10px 10px;
+}
+
+div#info .rules_title {
+	font-size: 1.6em;
+	padding-top: 34px;
+}
+
+div#board {
+	width: 770px;
+	height: 725px;
+	top: 26px;
+	left: 405px;
+	position: absolute;
+	display: inline;
+	background-color: #fff;
+}
+
+div.board_element {
+	width: 256.6px;
+	height: 725px;
+	float: left;
+	display: inline-block;
+	background-color: #fff;
+}
+
+div.middle {
+	background-color: rgb(0, 247, 98);
+}
+
+div.middle div {
+	width: 250px;
+	margin: auto;
+	text-align: center;
+}
+
+div.middle .outcome {
+	padding-top: 60px;
+	height: 60px;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: rgb(89, 38, 0);
+}
+
+div.middle .make_choice {
+	margin-top: 230px;
+	height: 60px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: rgb(124, 53, 0);
+}
+
+div.middle button {
+	margin-top: 25px;
+	font-size: 1em;
+	letter-spacing: 0.8px;
+	color: #fff;
+	padding: 6px 6px;
+	background-color: rgb(58, 91, 255);
+}
+
+div.player_name {
+	margin-top: 50px;
+	height: 200px;
+	text-align: center;
+	text-decoration: underline;
+	letter-spacing: 2px;
+	font-family: verdana;
+	font-size: 2em;
+	font-weight: bold;
+	color: rgb(124, 53, 0);
+	padding-top: 20px;
+	padding-bottom: 100px;
+}
+
+div.image {
+	position: relative;
+}
+
+div.image img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+div.image img.choice_image {
+	display: none;
+}
+
+div.hidden_computer img {
+	display: none;
+}

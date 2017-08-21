@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
+	<title>Rock, paper, scissors || Alexandru Marinescu</title>
+	<link rel="stylesheet" type="text/css" href="rockpaper.css">
+</head>
+<body>
+	<div id="game">
+		<div id="info">
+			<div class="title">ROCK-PAPER-SCISSORS</div>
+			<div class="rules rules_title">Rules of the game:</div><br>
+			<div class="rules">1.Rock beats scissors</div>
+			<div class="rules">2.Scissors beats paper</div>
+			<div class="rules">3.Paper beats rock</div>
+		</div>
+		<div id="board">
+			<div class="board_element player" id="player_human">
+				<div class="player_name" id="human">Player 1</div>
+				<div class="image">
+					<img src="rockpaperscissors 250x135.jpg" alt="rock paper scissors" class="all_three">
+					<div class="hidden_human">
+						<img src="rock104x135.jpg" alt="rock" class="choice_image" id="rock">
+						<img src="paper104x135.jpg" alt="paper" class="choice_image" id="paper">
+						<img src="scissors104x135.jpg" alt="scissors" class="choice_image" id="scissors">
+					</div>
+				</div>
+			</div>
+			<div class="board_element middle" id="start_game">
+				<div class="outcome">START</div>
+				<div class="make_choice">MAKE A CHOICE:</div>
+				<div class="buttons">
+					<button id="button_rock">ROCK</button>
+					<button id="button_paper">PAPER</button>
+					<button id="button_scissors">SCISSORS</button>
+				</div>
+			</div>
+			<div class="board_element player" id="player_computer">
+				<div class="player_name">Computer</div>
+				<div class="image">
+					<img src="rockpaperscissors 250x135.jpg" alt="rock paper scissors" class="all_three">
+					<div class="hidden_computer">
+						<img src="rock104x135.jpg" alt="rock" class="choice_imagesss" id="rock">
+						<img src="paper104x135.jpg" alt="paper" class="choice_imagesss" id="paper">
+						<img src="scissors104x135.jpg" alt="scissors" class="choice_imagesss" id="scissors">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="rockpaper.js"></script>
+</body>
+</html>
