@@ -16,10 +16,14 @@ function theGame() {
 	var imgPaper = document.querySelector('#paper');
 	var imgScissors = document.querySelector('#scissors');
 	var imgAllThree = document.getElementsByClassName('all_three');
+	var scoreH = document.querySelector('.score_human');
+	var scoreC = document.querySelector('.score_computer');
 	var outcome = document.querySelector('.outcome');
 	var hiddenComputerImages = document.querySelector('.hidden_computer');
 	var imagesHuman = document.querySelectorAll('.hidden_human img');
 	var imagesComputer = document.querySelectorAll('.hidden_computer img'); 
+	var scoreHum = 1;
+	var scoreCom = 1;
 
 	btnRock.addEventListener('click', afterThreeSeconds);
 	function afterThreeSeconds() {
@@ -56,8 +60,10 @@ function theGame() {
 				outcome.innerHTML = "IT'S A TIE!";
 			} else if ((imagesHuman[0].style.display == "block") && (imagesComputer[1].style.display == "block")) {
 				outcome.innerHTML = "YOU LOSE";
+				scoreC.innerHTML = scoreCom++;
 			} else {
 				outcome.innerHTML = "YOU WIN";
+				scoreH.innerHTML = scoreHum++;
 			}
 			clearInterval(timeout);
 		}
@@ -100,10 +106,12 @@ function theGame() {
 
 			if ((imagesHuman[1].style.display == "block") && (imagesComputer[0].style.display == "block")) {
 				outcome.innerHTML = "YOU WIN";
+				scoreH.innerHTML = scoreHum++;
 			} else if ((imagesHuman[1].style.display == "block") && (imagesComputer[1].style.display == "block")) {
 				outcome.innerHTML = "IT'S A TIE!";
 			} else {
 				outcome.innerHTML = "YOU LOSE";
+				scoreC.innerHTML = scoreCom++;
 			}
 			clearInterval(timeout);
 		}
@@ -143,8 +151,10 @@ function theGame() {
 
 			if ((imagesHuman[2].style.display == "block") && (imagesComputer[0].style.display == "block")) {
 				outcome.innerHTML = "YOU LOSE";
+				scoreC.innerHTML = scoreCom++;
 			} else if ((imagesHuman[2].style.display == "block") && (imagesComputer[1].style.display == "block")) {
 				outcome.innerHTML = "YOU WIN";
+				scoreH.innerHTML = scoreHum++;
 			} else {
 				outcome.innerHTML = "IT'S A TIE!";
 			}

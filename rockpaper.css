@@ -101,9 +101,9 @@ div.middle button {
 	background-color: rgb(58, 91, 255);
 }
 
-div.player_name {
+div.player_name, div.score {
 	margin-top: 50px;
-	height: 200px;
+	height: 100px;
 	text-align: center;
 	text-decoration: underline;
 	letter-spacing: 2px;
@@ -112,7 +112,16 @@ div.player_name {
 	font-weight: bold;
 	color: rgb(124, 53, 0);
 	padding-top: 20px;
-	padding-bottom: 100px;
+	padding-bottom: 40px;
+}
+
+div.score {
+	height: 50px;
+	margin-top: 0;
+	font-size: 3em;
+	color: green;
+	padding-bottom: 90px;
+	text-decoration: none;
 }
 
 div.image {
