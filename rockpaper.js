@@ -1,12 +1,30 @@
 
+var entityMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+  '/': '&#x2F;',
+  '`': '&#x60;',
+  '=': '&#x3D;'
+};
+
+function escapeHtml (string) {
+  return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+    return entityMap[s];
+  });
+}
+
 function playerName() {
 	var name = prompt('Welcome to the "Rock, Paper, Scissors" game!\nPlease enter your name:');
-	document.getElementById('human').innerHTML = name;
+	document.getElementById('human').innerHTML = escapeHtml(name);
 	if (!name) {
 		document.getElementById('human').innerHTML = 'Player 1';
 	}
 }
 playerName();
+
 
 function theGame() {
 	var btnRock = document.querySelector('#button_rock');
@@ -29,6 +47,7 @@ function theGame() {
 	function afterThreeSeconds() {
 		var write123 = setInterval(writeOneTwoThree, 800);
 		var count = 3;
+		
 		function writeOneTwoThree() {
 			if (count === 0) {
 				clearInterval(write123);
@@ -71,12 +90,11 @@ function theGame() {
 	}
 
 
-
-
 	btnPaper.addEventListener('click', afterThreeSecondsP);
 	function afterThreeSecondsP() {
 		var write123 = setInterval(writeOneTwoThree, 800);
 		var count = 3;
+
 		function writeOneTwoThree() {
 			if (count === 0) {
 				clearInterval(write123);
@@ -122,6 +140,7 @@ function theGame() {
 	function afterThreeSecondsS() {
 		var write123 = setInterval(writeOneTwoThree, 800);
 		var count = 3;
+
 		function writeOneTwoThree() {
 			if (count === 0) {
 				clearInterval(write123);
